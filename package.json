@@ -1,0 +1,30 @@
+{
+  "name": "api-vuttr",
+  "version": "1.0.0",
+  "description": "Um simples repositório para gerenciar ferramentas com seus respectivos nomes, links, descrições e tags.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-server": "npm start",
+    "test": "mocha src/tests/index.js",
+    "ci": "start-server-and-test start-server http://localhost:3000 test"
+  },
+  "keywords": [],
+  "author": "Galdencio Leorne",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "mocha": "^5.2.0",
+    "start-server-and-test": "^1.7.11"
+  }
+}

@@ -1,0 +1,18 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const { config } = require('dotenv');
+const { join } = require('path');
+const configPath = join(__dirname, './..', `.env`);
+config({
+    path: configPath
+});
+
+const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+require('./app/controllers/index')(app);
+
+app.listen(process.env.PORT);
